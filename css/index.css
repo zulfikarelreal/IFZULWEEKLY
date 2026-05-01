@@ -1,0 +1,25 @@
+/* ============================================
+   index.css — Home Page Specific Styles
+   ============================================ */
+
+/* Hero tagline */
+.tagline {
+  display: inline-block;
+  font-size: 1.05rem;
+  background: linear-gradient(90deg, var(--sky), var(--sky-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+  font-style: italic;
+  margin-bottom: 16px;
+}
+
+/* About section spacing */
+.about-section h3 {
+  margin-top: 0;
+}
+
+.about-section p + p {
+  margin-top: 16px;
+}

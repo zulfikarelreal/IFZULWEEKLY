@@ -1,0 +1,11 @@
+/* ============================================
+   profile.css — Profile Page Specific Styles
+   ============================================ */
+
+.profile-links {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}

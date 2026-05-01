@@ -1,0 +1,18 @@
+/* ============================================
+   contact.css — Contact Page Specific Styles
+   ============================================ */
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+
+.contact-info {
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}

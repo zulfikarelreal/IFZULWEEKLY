@@ -1,0 +1,63 @@
+/* ============================================
+   tambahdata.css — Tambah Data Page Styles
+   ============================================ */
+
+/* ─── Form Wrapper ─── */
+.form-wrap {
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+/* ─── Form Group ─── */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--sky-pale);
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group input[type="file"] {
+  background: rgba(5,13,26,0.8);
+  border: 1px solid rgba(30,144,255,0.25);
+  border-radius: var(--radius-sm);
+  color: var(--white);
+  font-family: var(--font-main);
+  font-size: 0.95rem;
+  padding: 12px 14px;
+  outline: none;
+  transition: border-color var(--transition), box-shadow var(--transition);
+  width: 100%;
+}
+
+.form-group input:focus {
+  border-color: var(--sky);
+  box-shadow: 0 0 0 3px rgba(30,144,255,0.15);
+}
+
+.form-group input[type="file"] {
+  padding: 10px 14px;
+  cursor: pointer;
+  color: var(--muted);
+}
+
+.form-group input::placeholder {
+  color: var(--muted);
+  opacity: 0.6;
+}
+
+/* ─── Submit Row ─── */
+.form-submit {
+  margin-top: 8px;
+  display: flex;
+  justify-content: center;
+}
