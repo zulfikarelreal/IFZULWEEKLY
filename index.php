@@ -21,10 +21,10 @@
 
     <nav>
       <div class="nav-table">
-        <a href="index.html" class="active">HOME</a>
-        <a href="profile.html">PROFILE</a>
-        <a href="contact.html">CONTACT</a>
-        <a href="mahasiswa.html">DATA MAHASISWA</a>
+        <a href="index.php" class="active">HOME</a>
+        <a href="profile.php">PROFILE</a>
+        <a href="contact.php">CONTACT</a>
+        <a href="mahasiswa.php">DATA MAHASISWA</a>
       </div>
     </nav>
 
