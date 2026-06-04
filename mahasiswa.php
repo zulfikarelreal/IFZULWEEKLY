@@ -39,42 +39,75 @@
         <table class="data-table">
           <thead>
             <tr>
-              <th rowspan="2">NO</th>
-              <th rowspan="2">NAMA</th>
-              <th rowspan="2">FOTO</th>
-              <th colspan="3">NILAI</th>
+              <th>No</th>
+              <th>Nama</th>
+              <th>Nim</th>
+              <th>Program Studi</th>
+              <th>Email</th>
+              <th>No. HP</th>
+              <th>Foto</th>
+              <th>Action</th>
             </tr>
-            <tr>
+            <!-- <tr>
               <th>UTS</th>
               <th>UAS</th>
               <th>TUGAS</th>
-            </tr>
+            </tr> -->
           </thead>
           <tbody>
-            <tr>
-              <td>1</td>
-              <td>Aristoteles</td>
-              <td><img src="assets/aristoteles.jpg" alt="Aristoteles" width="80"></td>
-              <td><span class="score-badge">100</span></td>
-              <td><span class="score-badge">100</span></td>
-              <td><span class="score-badge">100</span></td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>Socrates</td>
-              <td><img src="assets/socrates.jpg" alt="Socrates" width="80"></td>
-              <td><span class="score-badge">100</span></td>
-              <td><span class="score-badge">100</span></td>
-              <td><span class="score-badge">100</span></td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>Plato</td>
-              <td><img src="assets/plato.jpg" alt="Plato" width="80"></td>
-              <td><span class="score-badge">100</span></td>
-              <td><span class="score-badge">100</span></td>
-              <td><span class="score-badge">100</span></td>
-            </tr>
+              <tr>
+                  <td>1</td>
+                  <td>Cristiano Ronaldo</td>
+                  <td>13182420001</td>
+                  <td>Informatika</td>
+                  <td>cr7@gmail.com</td>
+                  <td>0821273717273</td>
+                  <td>
+                      <img src="assets/ronaldo.jpg" alt="Cristiano Ronaldo" width="80">
+                  </td>
+                  <td>
+                    <div class="action-cell">
+                      <button class="btn-edit">✏ Edit</button>
+                      <button class="btn-delete">🗑 Hapus</button>
+                    </div>
+                  </td>
+              </tr>
+
+              <tr>
+                  <td>2</td>
+                  <td>Lionel Messi</td>
+                  <td>13182420002</td>
+                  <td>Informatika</td>
+                  <td>messi@gmail.com</td>
+                  <td>081234567890</td>
+                  <td>
+                      <img src="assets/messi.jpg" alt="Lionel Messi" width="80">
+                  </td>
+                  <td>
+                    <div class="action-cell">
+                      <button class="btn-edit">✏ Edit</button>
+                      <button class="btn-delete">🗑 Hapus</button>
+                    </div>
+                  </td>
+              </tr>
+
+              <tr>
+                  <td>3</td>
+                  <td>Neymar Junior</td>
+                  <td>13182420003</td>
+                  <td>Informatika</td>
+                  <td>neymar@gmail.com</td>
+                  <td>081987654321</td>
+                  <td>
+                      <img src="assets/neymar.jpg" alt="Neymar Junior" width="80">
+                  </td>
+                  <td>
+                    <div class="action-cell">
+                      <button class="btn-edit">✏ Edit</button>
+                      <button class="btn-delete">🗑 Hapus</button>
+                    </div>
+                  </td>
+              </tr>
           </tbody>
         </table>
       </div>
