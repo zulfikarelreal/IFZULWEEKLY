@@ -21,20 +21,20 @@
 
     <nav>
       <div class="nav-table">
-        <a href="index.php" class="active">HOME</a>
+        <a href="index.php">HOME</a>
         <a href="profile.php">PROFILE</a>
         <a href="contact.php">CONTACT</a>
-        <a href="mahasiswa.php">DATA MAHASISWA</a>
+        <a href="mahasiswa.php" class="active">DATA MAHASISWA</a>
       </div>
     </nav>
 
     <div class="content-card">
-      <a href="mahasiswa.html" class="back-link">Kembali ke Data Mahasiswa</a>
+      <a href="mahasiswa.php" class="back-link">Kembali ke Data Mahasiswa</a>
 
       <h2 style="margin-top: 24px;">Tambah Data Mahasiswa</h2>
 
       <div class="form-wrap">
-        <form action="mahasiswa.html" method="post">
+        <form action="mahasiswa.php" method="post">
 
           <div class="form-group">
             <label for="nama">Nama</label>

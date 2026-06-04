@@ -21,8 +21,8 @@
 
     <nav>
       <div class="nav-table">
-        <a href="index.php" class="active">HOME</a>
-        <a href="profile.php">PROFILE</a>
+        <a href="index.php">HOME</a>
+        <a href="profile.php" class="active">PROFILE</a>
         <a href="contact.php">CONTACT</a>
         <a href="mahasiswa.php">DATA MAHASISWA</a>
       </div>

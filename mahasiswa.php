@@ -21,10 +21,10 @@
 
     <nav>
       <div class="nav-table">
-        <a href="index.php" class="active">HOME</a>
+        <a href="index.php">HOME</a>
         <a href="profile.php">PROFILE</a>
         <a href="contact.php">CONTACT</a>
-        <a href="mahasiswa.php">DATA MAHASISWA</a>
+        <a href="mahasiswa.php" class="active">DATA MAHASISWA</a>
       </div>
     </nav>
 
@@ -32,7 +32,7 @@
       <h2>Data Mahasiswa</h2>
 
       <div class="btn-center">
-        <a href="tambahdata.html" class="btn">+ Tambah Data</a>
+        <a href="tambahdata.php" class="btn">+ Tambah Data</a>
       </div>
 
       <div class="data-table-wrap">
