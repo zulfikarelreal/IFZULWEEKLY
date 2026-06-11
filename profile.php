@@ -32,7 +32,7 @@
       <h2>Profile</h2>
       <div class="profile-links">
         <a href="https://github.com/zulfikarelreal" class="ext-link">GitHub — zulfikarelreal</a>
-        <a href="https://linkedin/in/muhammad-agung-zulfikar" class="ext-link">LinkedIn — Muhammad Agung Zulfikar</a>
+        <a href="https://linkedin.com/in/muhammad-agung-zulfikar" class="ext-link">LinkedIn — Muhammad Agung Zulfikar</a>
       </div>
     </div>
 

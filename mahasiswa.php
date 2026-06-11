@@ -1,3 +1,43 @@
+  <?php
+
+    // $connection = mysqli_connect("localhost", "root", "zulfikar230904", "ifzulweekly");
+
+    // if ($connection) {
+    //     echo "anjay mabar";
+    //   } else {
+    //     echo "matot";
+    //   }
+
+    // $query = "SELECT * FROM mahasiswa";
+    // $result = mysqli_query($connection, $query);
+
+    // FETCHING
+    // mysqli_fetch_row array numeric index
+    // mysqli_fetch_assoc array associatif index
+    // mysqli_fetch_array
+    // mysqli_fetch_object
+
+    // $mhs = mysqli_fetch_row($result); // index
+    // $mhs = mysqli_fetch_assoc($result); // key
+    // $mhs = mysqli_fetch_array($result); // index & key
+    // $mhs = mysqli_fetch_object($result); // object
+    
+    // while($mhs = mysqli_fetch_object($result)) {
+    //   var_dump($mhs);
+
+    // } 
+
+    // var_dump($mhs->nama); //object
+    // var_dump($mhs);
+  ?>
+
+<?php
+  require "function.php";
+
+  $qmahasiswa = "SELECT * FROM mahasiswa";
+  $mahasiswas = tampildata($qmahasiswa);
+?>
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -41,80 +81,40 @@
             <tr>
               <th>No</th>
               <th>Nama</th>
-              <th>Nim</th>
+              <th>NIM</th>
               <th>Program Studi</th>
               <th>Email</th>
               <th>No. HP</th>
               <th>Foto</th>
               <th>Action</th>
             </tr>
-            <!-- <tr>
-              <th>UTS</th>
-              <th>UAS</th>
-              <th>TUGAS</th>
-            </tr> -->
           </thead>
           <tbody>
-              <tr>
-                  <td>1</td>
-                  <td>Cristiano Ronaldo</td>
-                  <td>13182420001</td>
-                  <td>Informatika</td>
-                  <td>cr7@gmail.com</td>
-                  <td>0821273717273</td>
-                  <td>
-                      <img src="assets/ronaldo.jpg" alt="Cristiano Ronaldo" width="80">
-                  </td>
-                  <td>
-                    <div class="action-cell">
-                      <button class="btn-edit">✏ Edit</button>
-                      <button class="btn-delete">🗑 Hapus</button>
-                    </div>
-                  </td>
-              </tr>
-
-              <tr>
-                  <td>2</td>
-                  <td>Lionel Messi</td>
-                  <td>13182420002</td>
-                  <td>Informatika</td>
-                  <td>messi@gmail.com</td>
-                  <td>081234567890</td>
-                  <td>
-                      <img src="assets/messi.jpg" alt="Lionel Messi" width="80">
-                  </td>
-                  <td>
-                    <div class="action-cell">
-                      <button class="btn-edit">✏ Edit</button>
-                      <button class="btn-delete">🗑 Hapus</button>
-                    </div>
-                  </td>
-              </tr>
-
-              <tr>
-                  <td>3</td>
-                  <td>Neymar Junior</td>
-                  <td>13182420003</td>
-                  <td>Informatika</td>
-                  <td>neymar@gmail.com</td>
-                  <td>081987654321</td>
-                  <td>
-                      <img src="assets/neymar.jpg" alt="Neymar Junior" width="80">
-                  </td>
-                  <td>
-                    <div class="action-cell">
-                      <button class="btn-edit">✏ Edit</button>
-                      <button class="btn-delete">🗑 Hapus</button>
-                    </div>
-                  </td>
-              </tr>
+            <?php $no = 1; foreach ($mahasiswas as $mhs) : ?>
+            <tr>
+              <td><?= $no++ ?></td>
+              <td><?= $mhs['nama'] ?></td>
+              <td><?= $mhs['nim'] ?></td>
+              <td><?= $mhs['prodi'] ?></td>
+              <td><?= $mhs['email'] ?></td>
+              <td><?= $mhs['no_hp'] ?></td>
+              <td>
+                <img src="assets/<?= $mhs['foto'] ?>" alt="<?= $mhs['nama'] ?>" width="50">
+              </td>
+              <td>
+                <div class="action-cell">
+                  <button class="btn-edit">✏ Edit</button>
+                  <button class="btn-delete">🗑 Hapus</button>
+                </div>
+              </td>
+            </tr>
+            <?php endforeach; ?>
           </tbody>
         </table>
       </div>
 
       <hr class="divider">
 
-      <!-- Tabel Rowspan/Colspan Demo -->
       <div class="data-table-wrap">
         <table class="span-table">
           <tr>
