@@ -1,3 +1,24 @@
+<?php
+
+  require 'function.php';
+
+  if(isset($_POST["submit"])) {
+
+    if (tambahdata($_POST) > 0) { 
+      echo "<script>
+        alert('Data Berhasil Ditambahkan!');
+        window.location.href='mahasiswa.php';
+      </script>";
+    } else {
+      echo "<script>
+            alert('Data Gagal Ditambahkan!');
+            window.location.href='mahasiswa.php';
+          </script>";
+    }
+  }
+
+?>
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -34,35 +55,40 @@
       <h2 style="margin-top: 24px;">Tambah Data Mahasiswa</h2>
 
       <div class="form-wrap">
-        <form action="mahasiswa.php" method="post">
+        <form action="" method="post" enctype="multipart/form-data">
 
           <div class="form-group">
-            <label for="nama">Nama</label>
-            <input type="text" name="nama" id="nama" placeholder="Masukkan nama mahasiswa">
+            <label for="nama">Nama</label> 
+            <input type="text" name="nama" id="nama" placeholder="Masukkan nama mahasiswa" required>
+          </div>
+
+          <div class="form-group">
+            <label for="nim">NIM</label>
+            <input type="number" name="nim" id="nim" placeholder="Masukkan NIM mahasiswa" required>
+          </div>
+
+          <div class="form-group">
+            <label for="prodi">Program Studi</label>
+            <input type="text" name="prodi" id="prodi" placeholder="Contoh: Teknik Informatika" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="Contoh: nama@email.com" required>
+          </div>
+
+          <div class="form-group">
+            <label for="no_hp">No. HP</label>
+            <input type="number" name="no_hp" id="no_hp" placeholder="Contoh: 081234567890" required>
           </div>
 
           <div class="form-group">
             <label for="foto">Foto</label>
-            <input type="file" name="foto" id="foto" accept="image/*">
-          </div>
-
-          <div class="form-group">
-            <label for="uts">Nilai UTS</label>
-            <input type="number" name="uts" id="uts" placeholder="0 – 100" min="0" max="100">
-          </div>
-
-          <div class="form-group">
-            <label for="uas">Nilai UAS</label>
-            <input type="number" name="uas" id="uas" placeholder="0 – 100" min="0" max="100">
-          </div>
-
-          <div class="form-group">
-            <label for="tugas">Nilai Tugas</label>
-            <input type="number" name="tugas" id="tugas" placeholder="0 – 100" min="0" max="100">
+            <input type="text" name="foto" id="foto" accept="image/*" required>
           </div>
 
           <div class="form-submit">
-            <button type="submit" class="btn">Submit</button>
+            <button type="submit" name="submit" class="btn">Submit</button>
           </div>
 
         </form>

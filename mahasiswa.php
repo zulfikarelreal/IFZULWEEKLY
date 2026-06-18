@@ -103,8 +103,8 @@
               </td>
               <td>
                 <div class="action-cell">
-                  <button class="btn-edit">✏ Edit</button>
-                  <button class="btn-delete">🗑 Hapus</button>
+                  <a href="editdata.php"><button class="btn-edit">✏ Edit</button></a>
+                  <a href="hapusdata.php?id=<?= $mhs["id"] ?>" onclick="return confirm('Yakin deck?')" ><button class="btn-delete">🗑 Hapus</button></a>
                 </div>
               </td>
             </tr>
