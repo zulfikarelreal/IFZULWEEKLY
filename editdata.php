@@ -2,16 +2,21 @@
 
   require 'function.php';
 
-  if(isset($_POST["submit"])) {
+  $id = $_GET["id"];
 
-    if (tambahdata($_POST, $_FILES["foto"]) > 0) { 
+  $query = "SELECT * FROM mahasiswa WHERE id=$id";
+  $mhs = tampildata($query)[0];
+
+  if(isset($_POST["edit"])) {
+
+    if (editdata($_POST, $id, $_FILES) > 0) { 
       echo "<script>
-        alert('Data Berhasil Ditambahkan!');
+        alert('Data Berhasil Diedit!');
         window.location.href='mahasiswa.php';
       </script>";
     } else {
       echo "<script>
-            alert('Data Gagal Ditambahkan!');
+            alert('Data Gagal Diedit!');
             window.location.href='mahasiswa.php';
           </script>";
     }
@@ -24,7 +29,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tambah Data | CDIA</title>
+  <title>Edit Data | CDIA</title>
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/tambahdata.css">
 </head>
@@ -52,43 +57,43 @@
     <div class="content-card">
       <a href="mahasiswa.php" class="back-link">Kembali ke Data Mahasiswa</a>
 
-      <h2 style="margin-top: 24px;">Tambah Data Mahasiswa</h2>
+      <h2 style="margin-top: 24px;">Edit Data Mahasiswa</h2>
 
       <div class="form-wrap">
         <form action="" method="post" enctype="multipart/form-data">
 
           <div class="form-group">
             <label for="nama">Nama</label> 
-            <input type="text" name="nama" id="nama" placeholder="Masukkan nama mahasiswa" required>
+            <input type="text" name="nama" id="nama" value="<?= $mhs["nama"] ?>" placeholder="Masukkan nama mahasiswa" required>
           </div>
 
           <div class="form-group">
             <label for="nim">NIM</label>
-            <input type="number" name="nim" id="nim" placeholder="Masukkan NIM mahasiswa" required>
+            <input type="number" name="nim" id="nim" value="<?= $mhs["nim"] ?>" placeholder="Masukkan NIM mahasiswa" required>
           </div>
 
           <div class="form-group">
             <label for="prodi">Program Studi</label>
-            <input type="text" name="prodi" id="prodi" placeholder="Contoh: Teknik Informatika" required>
+            <input type="text" name="prodi" id="prodi" value="<?= $mhs["prodi"] ?>" placeholder="Contoh: Teknik Informatika" required>
           </div>
 
           <div class="form-group">
             <label for="email">Email</label>
-            <input type="email" name="email" id="email" placeholder="Contoh: nama@email.com" required>
+            <input type="email" name="email" id="email" value="<?= $mhs["email"] ?>" placeholder="Contoh: nama@email.com" required>
           </div>
 
           <div class="form-group">
             <label for="no_hp">No. HP</label>
-            <input type="number" name="no_hp" id="no_hp" placeholder="Contoh: 081234567890" required>
+            <input type="number" name="no_hp" id="no_hp" value="<?= $mhs["no_hp"] ?>" placeholder="Contoh: 081234567890" required>
           </div>
 
           <div class="form-group">
             <label for="foto">Foto</label>
-            <input type="file" name="foto" id="foto" accept="image/*" required>
+            <input type="file" name="foto" id="foto" value="<?= $mhs["foto"] ?>" accept="image/*" required>
           </div>
 
           <div class="form-submit">
-            <button type="submit" name="submit" class="btn">Submit</button>
+            <button type="submit" name="edit" class="btn">Edit</button>
           </div>
 
         </form>

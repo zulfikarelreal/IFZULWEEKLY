@@ -99,11 +99,11 @@
               <td><?= $mhs['email'] ?></td>
               <td><?= $mhs['no_hp'] ?></td>
               <td>
-                <img src="assets/<?= $mhs['foto'] ?>" alt="<?= $mhs['nama'] ?>" width="50">
+                <img src="assets/images/<?= $mhs['foto'] ?>" alt="<?= $mhs['nama'] ?>" width="150">
               </td>
               <td>
                 <div class="action-cell">
-                  <a href="editdata.php"><button class="btn-edit">✏ Edit</button></a>
+                  <a href="editdata.php?id=<?= $mhs["id"] ?>"> <button class="btn-edit">✏ Edit</button></a>
                   <a href="hapusdata.php?id=<?= $mhs["id"] ?>" onclick="return confirm('Yakin deck?')" ><button class="btn-delete">🗑 Hapus</button></a>
                 </div>
               </td>
