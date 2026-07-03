@@ -1,4 +1,5 @@
 <?php
+    session_start();
     $connection = mysqli_connect("localhost", "root", "zulfikar230904", "ifzulweekly");
 
     function tampildata($query) { // proses data yang diminta
@@ -136,6 +137,7 @@
             $row = mysqli_fetch_assoc($result);
 
             if (password_verify($password, $row["password"])) {
+                $_SESSION["login"] = true;
                 header("Location: mahasiswa.php");
                 exit;
             }

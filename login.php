@@ -1,6 +1,11 @@
 <?php
     require 'function.php';
 
+    if (isset($_SESSION["login"])) {
+        header("Location: mahasiswa.php");
+        exit;
+    }
+
     if (isset($_POST["login"])) {
         if(login($_POST)) {
         }

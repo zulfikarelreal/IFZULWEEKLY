@@ -34,6 +34,11 @@
 <?php
   require "function.php";
 
+  if (!isset($_SESSION["login"])) {
+    header("Location: login.php");
+    exit;
+  }
+
   $qmahasiswa = "SELECT * FROM mahasiswa";
   $mahasiswas = tampildata($qmahasiswa);
 ?>
@@ -50,6 +55,8 @@
 <body>
 
   <div class="page-wrapper">
+
+    <a href="logout.php">Logout</a>
 
     <header class="site-header">
       <h1 class="site-title">CHANDRA DAYA INVESTASI (CDIA)</h1>
