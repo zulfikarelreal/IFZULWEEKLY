@@ -42,7 +42,7 @@
     </header>
 
     <div class="logo-wrap">
-      <img src="assets/logo.png" alt="Logo CDIA">
+      <img src="assets/images/logo.png" alt="Logo CDIA">
     </div>
 
     <nav>
