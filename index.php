@@ -25,6 +25,7 @@
         <a href="profile.php">PROFILE</a>
         <a href="contact.php">CONTACT</a>
         <a href="mahasiswa.php">DATA MAHASISWA</a>
+        <a href="login.php">LOGIN</a>
       </div>
     </nav>
 

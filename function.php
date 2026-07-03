@@ -87,4 +87,58 @@
 
         return mysqli_affected_rows($connection); // QUERY OK 1 ROW AFFECTED
     }
+
+    function register($data) {
+        global $connection;
+
+        $username = strtolower(stripslashes($data["username"]));
+        $password = mysqli_real_escape_string($connection, $data["password"]);
+        $confirmpassword = mysqli_real_escape_string($connection, $data["confirmpassword"]);
+
+        if ($password != $confirmpassword) {
+            echo "<script>
+                alert('Pastikan data yang anda masukan sudah benar !');
+            </script>";
+            return false;
+        }
+
+        $result = mysqli_query($connection, "SELECT * FROM user WHERE username = '$username'");
+        
+        if (mysqli_fetch_assoc($result)) {
+            echo "<script>
+                alert('username ini sudah terdaftar !');
+            </script>";
+            return false;
+        }
+        
+        // encrypt password
+        $password_hash = password_hash($password, PASSWORD_DEFAULT);
+
+        $query = "INSERT INTO user (username, password)
+        VALUES ('$username','$password_hash')";
+
+        mysqli_query($connection, $query);
+
+        return mysqli_affected_rows($connection);
+    }
+
+    function login($data) {
+        global $connection;
+
+        $username = strtolower(stripslashes($data["username"]));
+        $password = $data["password"];
+
+        $query = "SELECT * FROM user WHERE username = '$username'";
+
+        $result = mysqli_query($connection, $query);
+
+        if (mysqli_num_rows($result) == 1) {
+            $row = mysqli_fetch_assoc($result);
+
+            if (password_verify($password, $row["password"])) {
+                header("Location: mahasiswa.php");
+                exit;
+            }
+        } $error = true;
+    }
 ?>
